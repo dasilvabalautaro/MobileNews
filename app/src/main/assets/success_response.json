@@ -1,0 +1,953 @@
+{
+  "hits": [
+    {
+      "created_at": "2022-08-26T05:17:38.000Z",
+      "title": null,
+      "url": null,
+      "author": "SllX",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Hopefully they never will. Nothing I’ve read about RCS in the last two months has convinced me it is anything other than a security and spam hole waiting to happen. If there’s to be an inter-operable standard between Apple and Android, I think it has to be Apple and Google-driven rather than something that makes the carriers happy. Anything at all to reduce their role to dumb IP-carrying pipes is aces in my books.",
+      "num_comments": null,
+      "story_id": 32601873,
+      "story_title": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+      "story_url": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+      "parent_id": 32603304,
+      "created_at_i": 1661491058,
+      "_tags": [
+        "comment",
+        "author_SllX",
+        "story_32601873"
+      ],
+      "objectID": "32603617",
+      "_highlightResult": {
+        "author": {
+          "value": "SllX",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "Hopefully they never will. Nothing I’ve read about RCS in the last two months has convinced me it is anything other than a security and spam hole waiting to happen. If there’s to be an inter-operable standard between Apple and <em>Android</em>, I think it has to be Apple and Google-driven rather than something that makes the carriers happy. Anything at all to reduce their role to dumb IP-carrying pipes is aces in my books.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T05:16:18.000Z",
+      "title": null,
+      "url": null,
+      "author": "assttoasstmgr",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Yeah that&#x27;s <i>not</i> how it works. You can&#x27;t just &quot;put the complicated antenna on the satellite, instead of on the phone&quot; and declare this problem solved. If you believe that I have a bridge to sell you.<p>I&#x27;m declaring shenanigans right now on Elon&#x27;s pitch but what else is new. It makes me sad that this thread is full of (probably) SWEs in a complete froth who took this at face value with little understanding of how antennas work. No, your existing phone will not be able to work on this service, full stop.<p>The issue is not getting signal from the satellite to your phone. That&#x27;s the easy part - after all, your phone receives GPS signals. Satellites have powerful transmitters and high-gain antennas. Even GPS which is considered extremely low-power has a TX power of around 20-25 watts and EIRP is probably an order of magnitude higher after the antenna (probably enough to turn your eyeballs into Easter eggs if you were standing in front of it). The issue is going the other way. For messaging to work, your phone needs a two-way connection. Your current iPhone&#x2F;Android handset is simply not designed for satellite communication.<p>&quot;But muh Garmin inReach&quot; ..... have you stared at one and wondered &quot;why can&#x27;t my iPhone do this&quot;? First, the antenna is the size of a thumb, it looks like a helical antenna to me, which would make sense given that most satellite communications uses something called &quot;circular polarization&quot; to combat things like the Faraday effect. This requires an antenna specifically designed for it. Your iPhone doesn&#x27;t have one, which means more signal loss. Iridium phones look similar - very Michael Douglas in Wall Street industrial design. Satellite phones and communicators are designed to direct most of the energy upwards towards the sky. Your existing phone does not so you are losing most of the energy in an omnidirectional pattern. Even things like 406 MHz emergency beacons send extremely short message bursts - just a few bytes - the link budget needed to sustain an IP connection (uplink) with an existing handset just isn&#x27;t there.<p>So I&#x27;m expecting Elon to deliver on the magical complicated-super-antenna that works with your existing mobile handset right around the same time he gives us his FSD Cybertruck. Which is to say, never.",
+      "num_comments": null,
+      "story_id": 32601873,
+      "story_title": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+      "story_url": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+      "parent_id": 32602139,
+      "created_at_i": 1661490978,
+      "_tags": [
+        "comment",
+        "author_assttoasstmgr",
+        "story_32601873"
+      ],
+      "objectID": "32603607",
+      "_highlightResult": {
+        "author": {
+          "value": "assttoasstmgr",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "Yeah that's <i>not</i> how it works. You can't just &quot;put the complicated antenna on the satellite, instead of on the phone&quot; and declare this problem solved. If you believe that I have a bridge to sell you.<p>I'm declaring shenanigans right now on Elon's pitch but what else is new. It makes me sad that this thread is full of (probably) SWEs in a complete froth who took this at face value with little understanding of how antennas work. No, your existing phone will not be able to work on this service, full stop.<p>The issue is not getting signal from the satellite to your phone. That's the easy part - after all, your phone receives GPS signals. Satellites have powerful transmitters and high-gain antennas. Even GPS which is considered extremely low-power has a TX power of around 20-25 watts and EIRP is probably an order of magnitude higher after the antenna (probably enough to turn your eyeballs into Easter eggs if you were standing in front of it). The issue is going the other way. For messaging to work, your phone needs a two-way connection. Your current iPhone/<em>Android</em> handset is simply not designed for satellite communication.<p>&quot;But muh Garmin inReach&quot; ..... have you stared at one and wondered &quot;why can't my iPhone do this&quot;? First, the antenna is the size of a thumb, it looks like a helical antenna to me, which would make sense given that most satellite communications uses something called &quot;circular polarization&quot; to combat things like the Faraday effect. This requires an antenna specifically designed for it. Your iPhone doesn't have one, which means more signal loss. Iridium phones look similar - very Michael Douglas in Wall Street industrial design. Satellite phones and communicators are designed to direct most of the energy upwards towards the sky. Your existing phone does not so you are losing most of the energy in an omnidirectional pattern. Even things like 406 MHz emergency beacons send extremely short message bursts - just a few bytes - the link budget needed to sustain an IP connection (uplink) with an existing handset just isn't there.<p>So I'm expecting Elon to deliver on the magical complicated-super-antenna that works with your existing mobile handset right around the same time he gives us his FSD Cybertruck. Which is to say, never.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T05:02:00.000Z",
+      "title": null,
+      "url": null,
+      "author": "rlt",
+      "points": null,
+      "story_text": null,
+      "comment_text": "They could, but they’ve supposedly been working on hardware support for Globalstar satellites in the next iPhone for 2 years.<p>They want this as a differentiator from Android. Starlink will work on Android too.<p>So maybe it would actually make sense for Google to partner with them somehow (I believe they’re also a SpaceX investor) but I’m not sure how.",
+      "num_comments": null,
+      "story_id": 32601873,
+      "story_title": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+      "story_url": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+      "parent_id": 32603162,
+      "created_at_i": 1661490120,
+      "_tags": [
+        "comment",
+        "author_rlt",
+        "story_32601873"
+      ],
+      "objectID": "32603533",
+      "_highlightResult": {
+        "author": {
+          "value": "rlt",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "They could, but they’ve supposedly been working on hardware support for Globalstar satellites in the next iPhone for 2 years.<p>They want this as a differentiator from <em>Android</em>. Starlink will work on <em>Android</em> too.<p>So maybe it would actually make sense for Google to partner with them somehow (I believe they’re also a SpaceX investor) but I’m not sure how.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T04:26:23.000Z",
+      "title": null,
+      "url": null,
+      "author": "atyppo",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Spend some time in an affluent neighborhood in a large metro area and I think you&#x27;ll realize that isn&#x27;t true. I sure don&#x27;t know any Tribeca or Pacific Heights residents with Androids.",
+      "num_comments": null,
+      "story_id": 32601873,
+      "story_title": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+      "story_url": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+      "parent_id": 32603075,
+      "created_at_i": 1661487983,
+      "_tags": [
+        "comment",
+        "author_atyppo",
+        "story_32601873"
+      ],
+      "objectID": "32603352",
+      "_highlightResult": {
+        "author": {
+          "value": "atyppo",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "Spend some time in an affluent neighborhood in a large metro area and I think you'll realize that isn't true. I sure don't know any Tribeca or Pacific Heights residents with <em>Android</em>s.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T04:12:12.000Z",
+      "title": null,
+      "url": null,
+      "author": "vineyardmike",
+      "points": null,
+      "story_text": null,
+      "comment_text": "I doubt it.<p>The value-add now is that you keep and iPhone so you have iMessage. You stay blue bubble etc.<p>The value add of satellite is that you have <i>service</i> on a mountain (or a plane?). The value is that most androids won’t have that (a musk-maybe-one-day project aside).<p>It’s way more likely they’ll make it exclusively available on high end phones. Thats a way more obvious play for apple.",
+      "num_comments": null,
+      "story_id": 32601873,
+      "story_title": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+      "story_url": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+      "parent_id": 32602857,
+      "created_at_i": 1661487132,
+      "_tags": [
+        "comment",
+        "author_vineyardmike",
+        "story_32601873"
+      ],
+      "objectID": "32603277",
+      "_highlightResult": {
+        "author": {
+          "value": "vineyardmike",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "I doubt it.<p>The value-add now is that you keep and iPhone so you have iMessage. You stay blue bubble etc.<p>The value add of satellite is that you have <i>service</i> on a mountain (or a plane?). The value is that most <em>android</em>s won’t have that (a musk-maybe-one-day project aside).<p>It’s way more likely they’ll make it exclusively available on high end phones. Thats a way more obvious play for apple.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T03:43:41.000Z",
+      "title": null,
+      "url": null,
+      "author": "CharlesW",
+      "points": null,
+      "story_text": null,
+      "comment_text": "&gt; <i>Because that’s the scenario they’re talking about, where nothing sends because you have no signal whatsoever.</i><p>Right, but the point of an iPhone that can talk to satellites that I&#x27;ll generally always have at least a low-bitrate IP connection? Because with that, I can text iDevice and Android users alike.",
+      "num_comments": null,
+      "story_id": 32601873,
+      "story_title": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+      "story_url": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+      "parent_id": 32603052,
+      "created_at_i": 1661485421,
+      "_tags": [
+        "comment",
+        "author_CharlesW",
+        "story_32601873"
+      ],
+      "objectID": "32603122",
+      "_highlightResult": {
+        "author": {
+          "value": "CharlesW",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "&gt; <i>Because that’s the scenario they’re talking about, where nothing sends because you have no signal whatsoever.</i><p>Right, but the point of an iPhone that can talk to satellites that I'll generally always have at least a low-bitrate IP connection? Because with that, I can text iDevice and <em>Android</em> users alike.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T03:24:01.000Z",
+      "title": null,
+      "url": null,
+      "author": "CapmCrackaWaka",
+      "points": null,
+      "story_text": null,
+      "comment_text": "I find this completely false, messaging anyone on a non-iPhone (from my iPhone) is a complete disaster. Pictures &#x2F; texts randomly fail to send, videos turn to 12 pixel noise, it’s so bad that an entire generation of people have friend groups that apple &#x2F; android only because communication between the two phones is so bad.",
+      "num_comments": null,
+      "story_id": 32601873,
+      "story_title": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+      "story_url": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+      "parent_id": 32602924,
+      "created_at_i": 1661484241,
+      "_tags": [
+        "comment",
+        "author_CapmCrackaWaka",
+        "story_32601873"
+      ],
+      "objectID": "32603014",
+      "_highlightResult": {
+        "author": {
+          "value": "CapmCrackaWaka",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "I find this completely false, messaging anyone on a non-iPhone (from my iPhone) is a complete disaster. Pictures / texts randomly fail to send, videos turn to 12 pixel noise, it’s so bad that an entire generation of people have friend groups that apple / <em>android</em> only because communication between the two phones is so bad.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "SpaceX, T-Mobile to connect satellites to cellphones in remote areas",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://www.wsj.com/articles/spacex-and-t-mobile-to-connect-starlink-satellites-to-cellphones-in-remote-parts-of-u-s-11661473520",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T02:53:44.000Z",
+      "title": null,
+      "url": null,
+      "author": "FridayoLeary",
+      "points": null,
+      "story_text": null,
+      "comment_text": "&gt;&quot;Most people do not have the\ntime or patience to read privacy\npolicies that can be several pages\nlong for each website they visit,&quot;\nsaid StockApps.com&#x27;s Edith\nReads.<p>&gt;&quot;As a result, users end up allowing Google to harvest all the\ndata they need by agreeing to the\nprivacy policy terms.&quot;<p>The implied notion that users have any other option but to agree to any arbitrary t&amp;c is laughable. What are you going to do? Brick your iPhone&#x2F;android&#x2F;tv&#x2F;smart device, never use Amazon FB etc, etc?",
+      "num_comments": null,
+      "story_id": 32602121,
+      "story_title": "Google tracks 39 types of personal data, Apple tracks 12",
+      "story_url": "https://appleinsider.com/articles/22/08/25/google-tracks-39-types-of-personal-data-apple-tracks-12",
+      "parent_id": 32602121,
+      "created_at_i": 1661482424,
+      "_tags": [
+        "comment",
+        "author_FridayoLeary",
+        "story_32602121"
+      ],
+      "objectID": "32602849",
+      "_highlightResult": {
+        "author": {
+          "value": "FridayoLeary",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "&gt;&quot;Most people do not have the\ntime or patience to read privacy\npolicies that can be several pages\nlong for each website they visit,&quot;\nsaid StockApps.com's Edith\nReads.<p>&gt;&quot;As a result, users end up allowing Google to harvest all the\ndata they need by agreeing to the\nprivacy policy terms.&quot;<p>The implied notion that users have any other option but to agree to any arbitrary t&amp;c is laughable. What are you going to do? Brick your iPhone/<em>android</em>/tv/smart device, never use Amazon FB etc, etc?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "Google tracks 39 types of personal data, Apple tracks 12",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://appleinsider.com/articles/22/08/25/google-tracks-39-types-of-personal-data-apple-tracks-12",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T01:35:58.000Z",
+      "title": null,
+      "url": null,
+      "author": "RestlessMind",
+      "points": null,
+      "story_text": null,
+      "comment_text": "&gt; at most a Pyrrhic victory<p>Then you don&#x27;t understand the strategy behind Android. This is a fantastic article to help you explain: <a href=\"https:&#x2F;&#x2F;techcrunch.com&#x2F;2011&#x2F;03&#x2F;25&#x2F;search-googles-castle-moat&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;techcrunch.com&#x2F;2011&#x2F;03&#x2F;25&#x2F;search-googles-castle-moat...</a><p>TL;DR: Android was one of the best moats Google could build for its data-and-ads business.",
+      "num_comments": null,
+      "story_id": 32538805,
+      "story_title": "A dad took photos of his toddler for a doctor – Google flagged him as a criminal",
+      "story_url": "https://www.nytimes.com/2022/08/21/technology/google-surveillance-toddler-photo.html",
+      "parent_id": 32544974,
+      "created_at_i": 1661477758,
+      "_tags": [
+        "comment",
+        "author_RestlessMind",
+        "story_32538805"
+      ],
+      "objectID": "32602320",
+      "_highlightResult": {
+        "author": {
+          "value": "RestlessMind",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "&gt; at most a Pyrrhic victory<p>Then you don't understand the strategy behind <em>Android</em>. This is a fantastic article to help you explain: <a href=\"https://techcrunch.com/2011/03/25/search-googles-castle-moat/\" rel=\"nofollow\">https://techcrunch.com/2011/03/25/search-googles-castle-moat...</a><p>TL;DR: <em>Android</em> was one of the best moats Google could build for its data-and-ads business.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "A dad took photos of his toddler for a doctor – Google flagged him as a criminal",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://www.nytimes.com/2022/08/21/technology/google-surveillance-toddler-photo.html",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T01:00:03.000Z",
+      "title": null,
+      "url": null,
+      "author": "YourGrace",
+      "points": null,
+      "story_text": null,
+      "comment_text": "It&#x27;s nice to see new tools and SDKs being built to try and simplify development. However, I&#x27;m always against frameworks&#x2F;SDKs which try to abstract away the native coding experience and move developers away from using the SDKs Apple&#x2F;Google provide.<p>These types of solutions will always lag behind the official SDKs, and require ongoing maintenance from the authors as new features are added. This also requires individuals to learn something else in addition to the core SDK (I believe you will ultimately need to learn about the core SDK regardless of what you want to do).<p>In my opinion, working with the native SDKs is the best solution. You are as close to the SDK as possible and are able to do what you want. For Android in particular, it&#x27;s important to minimize the layers between your code and drawing the UI.<p>With that said, kudos on building this as it&#x27;s no easy feat to accomplish.",
+      "num_comments": null,
+      "story_id": 32592550,
+      "story_title": "Build Android apps without an Android SDK using PicoLisp",
+      "story_url": "https://picolisp.com/wiki/?pilbox",
+      "parent_id": 32592550,
+      "created_at_i": 1661475603,
+      "_tags": [
+        "comment",
+        "author_YourGrace",
+        "story_32592550"
+      ],
+      "objectID": "32602068",
+      "_highlightResult": {
+        "author": {
+          "value": "YourGrace",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "It's nice to see new tools and SDKs being built to try and simplify development. However, I'm always against frameworks/SDKs which try to abstract away the native coding experience and move developers away from using the SDKs Apple/Google provide.<p>These types of solutions will always lag behind the official SDKs, and require ongoing maintenance from the authors as new features are added. This also requires individuals to learn something else in addition to the core SDK (I believe you will ultimately need to learn about the core SDK regardless of what you want to do).<p>In my opinion, working with the native SDKs is the best solution. You are as close to the SDK as possible and are able to do what you want. For <em>Android</em> in particular, it's important to minimize the layers between your code and drawing the UI.<p>With that said, kudos on building this as it's no easy feat to accomplish.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "Build <em>Android</em> apps without an <em>Android</em> SDK using PicoLisp",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_url": {
+          "value": "https://picolisp.com/wiki/?pilbox",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T00:58:21.000Z",
+      "title": null,
+      "url": null,
+      "author": "andsoitis",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Standing out is precisely not being “solitary”!",
+      "num_comments": null,
+      "story_id": 32595681,
+      "story_title": "Creativity requires solitude",
+      "story_url": "https://dkb.show/post/creativity-requires-solitude",
+      "parent_id": 32599711,
+      "created_at_i": 1661475501,
+      "_tags": [
+        "comment",
+        "author_andsoitis",
+        "story_32595681"
+      ],
+      "objectID": "32602053",
+      "_highlightResult": {
+        "author": {
+          "value": "<em>andsoit</em>is",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "comment_text": {
+          "value": "Standing out is precisely not being “solitary”!",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_title": {
+          "value": "Creativity requires solitude",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://dkb.show/post/creativity-requires-solitude",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-26T00:44:55.000Z",
+      "title": null,
+      "url": null,
+      "author": "never_inline",
+      "points": null,
+      "story_text": null,
+      "comment_text": "&gt; portable toy dev envs<p>There&#x27;s also termux and it&#x27;s predecessors, running debian rootfs with or without root. (Most of them based on proot).<p>Before proot, there were some manually ported GCC and friends.<p>Some years ago, I had an android 5 phone and hacked up a fakechroot&#x27;ed debian rootfs on a terminal emulator without root. Basically unpacking some debian .debs with statically linked busybox binary, then using a chain of LD_PRELOAD hacks to call a shell with a shim.<p>But proot is better solution (ptrace instead of shim), and termux is very well done.<p>On the other hand, if you&#x27;re thinking about scripting without all the hassle of Unix, I saw an app for experimenting with Android APIs using beanshell [1], I made an attempt to create a modern clone for my Android course project this year, but couldn&#x27;t take it much far due to shortage of time.<p>[1] <a href=\"https:&#x2F;&#x2F;f-droid.org&#x2F;en&#x2F;packages&#x2F;org.ligi.ajsha&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;f-droid.org&#x2F;en&#x2F;packages&#x2F;org.ligi.ajsha&#x2F;</a>",
+      "num_comments": null,
+      "story_id": 32592550,
+      "story_title": "Build Android apps without an Android SDK using PicoLisp",
+      "story_url": "https://picolisp.com/wiki/?pilbox",
+      "parent_id": 32593725,
+      "created_at_i": 1661474695,
+      "_tags": [
+        "comment",
+        "author_never_inline",
+        "story_32592550"
+      ],
+      "objectID": "32601960",
+      "_highlightResult": {
+        "author": {
+          "value": "never_inline",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "&gt; portable toy dev envs<p>There's also termux and it's predecessors, running debian rootfs with or without root. (Most of them based on proot).<p>Before proot, there were some manually ported GCC and friends.<p>Some years ago, I had an <em>android</em> 5 phone and hacked up a fakechroot'ed debian rootfs on a terminal emulator without root. Basically unpacking some debian .debs with statically linked busybox binary, then using a chain of LD_PRELOAD hacks to call a shell with a shim.<p>But proot is better solution (ptrace instead of shim), and termux is very well done.<p>On the other hand, if you're thinking about scripting without all the hassle of Unix, I saw an app for experimenting with <em>Android</em> APIs using beanshell [1], I made an attempt to create a modern clone for my <em>Android</em> course project this year, but couldn't take it much far due to shortage of time.<p>[1] <a href=\"https://f-droid.org/en/packages/org.ligi.ajsha/\" rel=\"nofollow\">https://f-droid.org/en/packages/org.ligi.ajsha/</a>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "Build <em>Android</em> apps without an <em>Android</em> SDK using PicoLisp",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_url": {
+          "value": "https://picolisp.com/wiki/?pilbox",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-25T23:43:33.000Z",
+      "title": null,
+      "url": null,
+      "author": "stereoradonc",
+      "points": null,
+      "story_text": null,
+      "comment_text": "BitWarden user here.<p>Everything in 1Password minus the toxic optimism, standards compliant migration (1Password can&#x27;t import from BitWarden, but other way round works) and one fourth of the subscription costs. BitWarden is easy to manage - I got my mother to install it on her Android device, and she can easily manage passwords. Their shift to an expensive subscription genuinely disappointed me with subpar applications. When alternatives work, why consider 1Password? Best option is to stay away from them.",
+      "num_comments": null,
+      "story_id": 32600677,
+      "story_title": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+      "story_url": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+      "parent_id": 32600677,
+      "created_at_i": 1661471013,
+      "_tags": [
+        "comment",
+        "author_stereoradonc",
+        "story_32600677"
+      ],
+      "objectID": "32601492",
+      "_highlightResult": {
+        "author": {
+          "value": "stereoradonc",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "BitWarden user here.<p>Everything in 1Password minus the toxic optimism, standards compliant migration (1Password can't import from BitWarden, but other way round works) and one fourth of the subscription costs. BitWarden is easy to manage - I got my mother to install it on her <em>Android</em> device, and she can easily manage passwords. Their shift to an expensive subscription genuinely disappointed me with subpar applications. When alternatives work, why consider 1Password? Best option is to stay away from them.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-25T23:42:06.000Z",
+      "title": null,
+      "url": null,
+      "author": "Groxx",
+      "points": null,
+      "story_text": null,
+      "comment_text": "One of the very best things I ever did while working on an Android app was to buy a dirt cheap phone.<p>Every performance problem was obvious. Every fix was a clear improvement. And when things were acceptable there, the app absolutely <i>screamed</i> on modern phones. We had startup times faster than Android&#x27;s launch animation with a little bit of care.  Our users loved it.",
+      "num_comments": null,
+      "story_id": 32600677,
+      "story_title": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+      "story_url": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+      "parent_id": 32601269,
+      "created_at_i": 1661470926,
+      "_tags": [
+        "comment",
+        "author_Groxx",
+        "story_32600677"
+      ],
+      "objectID": "32601478",
+      "_highlightResult": {
+        "author": {
+          "value": "Groxx",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "One of the very best things I ever did while working on an <em>Android</em> app was to buy a dirt cheap phone.<p>Every performance problem was obvious. Every fix was a clear improvement. And when things were acceptable there, the app absolutely <i>screamed</i> on modern phones. We had startup times faster than <em>Android</em>'s launch animation with a little bit of care.  Our users loved it.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-25T23:41:50.000Z",
+      "title": null,
+      "url": null,
+      "author": "rstat1",
+      "points": null,
+      "story_text": null,
+      "comment_text": "The Android version isn&#x27;t. Its built with React Native.",
+      "num_comments": null,
+      "story_id": 32600677,
+      "story_title": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+      "story_url": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+      "parent_id": 32601084,
+      "created_at_i": 1661470910,
+      "_tags": [
+        "comment",
+        "author_rstat1",
+        "story_32600677"
+      ],
+      "objectID": "32601476",
+      "_highlightResult": {
+        "author": {
+          "value": "rstat1",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "The <em>Android</em> version isn't. Its built with React Native.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-25T23:20:16.000Z",
+      "title": null,
+      "url": null,
+      "author": "replete",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Thanks for the info.<p>I just need browser integrations to work and for it to be open source, I was pretty surprised how well the autofill works on Android. No way am I putting my passwords on the cloud, that makes zero sense to me.",
+      "num_comments": null,
+      "story_id": 32600677,
+      "story_title": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+      "story_url": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+      "parent_id": 32601208,
+      "created_at_i": 1661469616,
+      "_tags": [
+        "comment",
+        "author_replete",
+        "story_32600677"
+      ],
+      "objectID": "32601302",
+      "_highlightResult": {
+        "author": {
+          "value": "replete",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "Thanks for the info.<p>I just need browser integrations to work and for it to be open source, I was pretty surprised how well the autofill works on <em>Android</em>. No way am I putting my passwords on the cloud, that makes zero sense to me.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-25T23:08:41.000Z",
+      "title": null,
+      "url": null,
+      "author": "throwaway67743",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Irony being, electron element would be a huge improvement over the current disaster that is the android client (purely on a ram&#x2F;performance basis, ignoring the horrific security problems which are ignored time and time again)",
+      "num_comments": null,
+      "story_id": 32600677,
+      "story_title": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+      "story_url": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+      "parent_id": 32601160,
+      "created_at_i": 1661468921,
+      "_tags": [
+        "comment",
+        "author_throwaway67743",
+        "story_32600677"
+      ],
+      "objectID": "32601192",
+      "_highlightResult": {
+        "author": {
+          "value": "throwaway67743",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "Irony being, electron element would be a huge improvement over the current disaster that is the <em>android</em> client (purely on a ram/performance basis, ignoring the horrific security problems which are ignored time and time again)",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-25T23:05:34.000Z",
+      "title": null,
+      "url": null,
+      "author": "stryan",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Element is only electon on the desktop: both Android and iOS are native clients. That&#x27;s also an obscene amount of RAM usage for it; I&#x27;m in a good number of rooms and I think mine idles at around 50MB and according to Android maxes out at around 250MB.",
+      "num_comments": null,
+      "story_id": 32600677,
+      "story_title": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+      "story_url": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+      "parent_id": 32601049,
+      "created_at_i": 1661468734,
+      "_tags": [
+        "comment",
+        "author_stryan",
+        "story_32600677"
+      ],
+      "objectID": "32601160",
+      "_highlightResult": {
+        "author": {
+          "value": "stryan",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "Element is only electon on the desktop: both <em>Android</em> and iOS are native clients. That's also an obscene amount of RAM usage for it; I'm in a good number of rooms and I think mine idles at around 50MB and according to <em>Android</em> maxes out at around 250MB.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-25T23:03:04.000Z",
+      "title": null,
+      "url": null,
+      "author": "replete",
+      "points": null,
+      "story_text": null,
+      "comment_text": "The main reason I switched from 1password 7 is that at some point they removed the option to disable code signature checks, meaning they had to update 1Password whenever a browser vendor changed their signature. This effectively means that Firefox working with the old version is going to end at some point, they just happen to have kept the same signature or some time.<p>The other side of this, is that it will not work with LibreFox, which isn&#x27;t signed. Frustratingly, they had the option to disable checks for years in 1Password and removed it.<p>KeePassXC is the way to go. Similar experience on android and desktop to 1Password (non-SaaS) local vault.",
+      "num_comments": null,
+      "story_id": 32600677,
+      "story_title": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+      "story_url": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+      "parent_id": 32600677,
+      "created_at_i": 1661468584,
+      "_tags": [
+        "comment",
+        "author_replete",
+        "story_32600677"
+      ],
+      "objectID": "32601135",
+      "_highlightResult": {
+        "author": {
+          "value": "replete",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "The main reason I switched from 1password 7 is that at some point they removed the option to disable code signature checks, meaning they had to update 1Password whenever a browser vendor changed their signature. This effectively means that Firefox working with the old version is going to end at some point, they just happen to have kept the same signature or some time.<p>The other side of this, is that it will not work with LibreFox, which isn't signed. Frustratingly, they had the option to disable checks for years in 1Password and removed it.<p>KeePassXC is the way to go. Similar experience on <em>android</em> and desktop to 1Password (non-SaaS) local vault.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-25T22:56:31.000Z",
+      "title": null,
+      "url": null,
+      "author": "replete",
+      "points": null,
+      "story_text": null,
+      "comment_text": "Switched away from 1password recently after 10 years. Open-source KeepassXC almost as good. No regrets.<p>Every Electron app seems to want around 400MB RAM minimum. It&#x27;s not practical for too many of your day-to-day essential applications to be greedy with resources, it all adds up and not everyone has 32GB of RAM.<p>I used Matrix chat client, Element, on Android - it&#x27;s an electron app, guess what? It uses 500mb-1GB of RAM. KDE NeoChat Android used 50MB. Electron is simply not a good fit for everyone.",
+      "num_comments": null,
+      "story_id": 32600677,
+      "story_title": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+      "story_url": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+      "parent_id": 32600677,
+      "created_at_i": 1661468191,
+      "_tags": [
+        "comment",
+        "author_replete",
+        "story_32600677"
+      ],
+      "objectID": "32601049",
+      "_highlightResult": {
+        "author": {
+          "value": "replete",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "comment_text": {
+          "value": "Switched away from 1password recently after 10 years. Open-source KeepassXC almost as good. No regrets.<p>Every Electron app seems to want around 400MB RAM minimum. It's not practical for too many of your day-to-day essential applications to be greedy with resources, it all adds up and not everyone has 32GB of RAM.<p>I used Matrix chat client, Element, on <em>Android</em> - it's an electron app, guess what? It uses 500mb-1GB of RAM. KDE NeoChat <em>Android</em> used 50MB. Electron is simply not a good fit for everyone.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": [
+            "android"
+          ]
+        },
+        "story_title": {
+          "value": "1Password delisting forum posts critical of their new Electron based 1Password 8",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        },
+        "story_url": {
+          "value": "https://1password.community/discussion/128419/version-8-in-the-apple-app-store/p6",
+          "matchLevel": "none",
+          "matchedWords": [ ]
+        }
+      }
+    }
+  ],
+  "nbHits": 278758,
+  "page": 0,
+  "nbPages": 50,
+  "hitsPerPage": 20,
+  "exhaustiveNbHits": false,
+  "exhaustiveTypo": true,
+  "query": "android",
+  "params": "advancedSyntax=true&analytics=true&analyticsTags=backend&query=android",
+  "processingTimeMS": 13,
+  "processingTimingsMS": {
+    "afterSearch": {
+      "format": {
+        "highlighting": 1,
+        "total": 1
+      },
+      "total": 2
+    },
+    "getIdx": 2,
+    "search": {
+      "total": 7
+    },
+    "total": 13
+  }
+}
