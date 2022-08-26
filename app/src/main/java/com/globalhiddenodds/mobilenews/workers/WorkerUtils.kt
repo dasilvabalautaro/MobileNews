@@ -23,6 +23,7 @@ object WorkerUtils {
         val listHit = mutableListOf<HitCloud>()
         list.forEach {
             val hitCloud = HitCloud(
+                it[ConstantsHit.KEY_OBJECT_ID] as String,
                 it[ConstantsHit.KEY_PARENT_ID] as Double,
                 it[ConstantsHit.KEY_STORY_ID] as Double,
                 it[ConstantsHit.KEY_TITLE] as String,

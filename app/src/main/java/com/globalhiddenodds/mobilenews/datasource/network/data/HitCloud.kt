@@ -1,6 +1,9 @@
 package com.globalhiddenodds.mobilenews.datasource.network.data
 
+import com.globalhiddenodds.mobilenews.datasource.database.data.Hit
+
 data class HitCloud(
+    val objectId: String,
     val parentId: Double?,
     val storyId: Double?,
     val storyTitle: String?,
@@ -8,3 +11,12 @@ data class HitCloud(
     val storyUrl: String?,
     val created: Double?
 )
+
+fun HitCloud.toHit(): Hit = Hit(
+    objectId,
+    parentId,
+    storyId,
+    storyTitle,
+    author,
+    storyUrl,
+    created)

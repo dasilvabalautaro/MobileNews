@@ -9,4 +9,6 @@ object ConstantsHit {
     const val KEY_STORY_URL = "story_url"
     const val KEY_CREATED = "created_at_i"
     const val KEY_HITS = "hits"
+    const val KEY_STATE = "state"
+    const val KEY_OBJECT_ID = "objectID"
 }
