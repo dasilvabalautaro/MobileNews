@@ -11,4 +11,5 @@ object ConstantsHit {
     const val KEY_HITS = "hits"
     const val KEY_STATE = "state"
     const val KEY_OBJECT_ID = "objectID"
+    const val TAG_DOWN = "DOWNLOAD"
 }
