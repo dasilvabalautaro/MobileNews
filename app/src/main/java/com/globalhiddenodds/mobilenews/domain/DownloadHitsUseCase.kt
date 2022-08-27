@@ -8,7 +8,7 @@ import com.globalhiddenodds.mobilenews.workers.DownloadHitsWorker
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-
+//Pattern mediator
 class DownloadHitsUseCase @Inject constructor(
     @ApplicationContext val context: Context
 ) {
