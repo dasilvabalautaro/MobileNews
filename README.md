@@ -1,5 +1,5 @@
 # MobileNews Android
-Application of evaluation for Reign
+## Application of evaluation for Reign
 
 This application implements recently posted articles about Android or iOS on Hacker News. Use Kotlin with Retrofit, WorkManager, Hilt, Dagger, 
 Lifecycle, Coroutines and Compose. If you are looking for a simpler sample, it's good in many ways.
