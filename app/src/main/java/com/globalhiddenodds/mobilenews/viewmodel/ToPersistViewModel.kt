@@ -2,6 +2,7 @@ package com.globalhiddenodds.mobilenews.viewmodel
 
 import android.annotation.SuppressLint
 import android.content.Context
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.*
 import com.globalhiddenodds.mobilenews.R
 import com.globalhiddenodds.mobilenews.datasource.database.data.Hit
@@ -32,6 +33,7 @@ class ToPersistViewModel @Inject constructor(
             liveData { emit(transformHit(it)) }
         }
     }
+    val progress = mutableStateOf(false)
 
     private suspend fun transformHit(list: List<Hit>):
             List<HitView> {
@@ -60,8 +62,9 @@ class ToPersistViewModel @Inject constructor(
                     taskResultMutableLive.value = context
                         .getString(R.string.msg_success_insert)
                 }
-
+                progress.value = false
             } catch (throwable: Throwable) {
+                progress.value = false
                 taskResultMutableLive.value = throwable.message
             }
         }
@@ -79,5 +82,9 @@ class ToPersistViewModel @Inject constructor(
                 taskResultMutableLive.value = throwable.message
             }
         }
+    }
+
+    fun progressInit(value: Boolean){
+        progress.value = value
     }
 }
