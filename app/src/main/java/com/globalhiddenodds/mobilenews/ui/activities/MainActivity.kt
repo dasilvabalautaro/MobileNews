@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -55,13 +56,34 @@ fun MobileNewsApp() {
                     if (showBackButton) {
                         IconButton(onClick =
                         {
-                            navController.navigate(AppScreens.Hits.name) {
-                                popUpTo(AppScreens.Web.name + "/{url}") { inclusive = true }
+                            navController.navigate(
+                                AppScreens.Hits.name
+                            ) {
+                                popUpTo(
+                                    AppScreens.Web.name + "/{url}"
+                                ) {
+                                    inclusive = true
+                                }
                             }
                         }) {
                             Icon(
                                 Icons.Default.ArrowBack,
                                 stringResource(R.string.lbl_back)
+                            )
+                        }
+                    } else {
+                        IconButton(onClick = {
+                            navController.navigate(
+                                AppScreens.Hits.name
+                            ) {
+                                popUpTo(AppScreens.Hits.name) {
+                                    inclusive = true
+                                }
+                            }
+                        }) {
+                            Icon(
+                                Icons.Default.Refresh,
+                                stringResource(R.string.lbl_refresh)
                             )
                         }
                     }
@@ -72,7 +94,6 @@ fun MobileNewsApp() {
                 navController = navController,
                 modifier = Modifier.padding(it)
             )
-
         }
     }
 }

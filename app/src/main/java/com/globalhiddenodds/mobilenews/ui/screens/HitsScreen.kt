@@ -23,6 +23,7 @@ import androidx.navigation.NavHostController
 import androidx.work.WorkInfo
 import com.globalhiddenodds.mobilenews.R
 import com.globalhiddenodds.mobilenews.ui.composables.Detail
+import com.globalhiddenodds.mobilenews.ui.composables.ProgressBarHit
 import com.globalhiddenodds.mobilenews.ui.composables.Title
 import com.globalhiddenodds.mobilenews.ui.configuration.AppScreens
 import com.globalhiddenodds.mobilenews.ui.configuration.Utils
@@ -40,8 +41,8 @@ fun HitsBody(
     toPersistViewModel: ToPersistViewModel = hiltViewModel(),
     downloadHitsViewModel: DownloadHitsViewModel = hiltViewModel()
 ) {
-    //ProgressBarHit(isDisplayed = true)
     val context = LocalContext.current
+    toPersistViewModel.progressInit(true)
 
     if (Utils.isConnect(context)) {
         ObserverWorkInfo(
@@ -72,6 +73,8 @@ private fun ObserverWorkInfo(
     toPersistViewModel: ToPersistViewModel,
     navController: NavHostController
 ) {
+    val loadingProgress = toPersistViewModel.progress.value
+    ProgressBarHit(loadingProgress)
     val list by downloadHitsViewModel.workInfo.observeAsState()
     list?.let {
         when (it[0].state) {
@@ -79,7 +82,7 @@ private fun ObserverWorkInfo(
                 toPersistViewModel = toPersistViewModel,
                 navController
             )
-            WorkInfo.State.FAILED -> MessageFailed()
+            WorkInfo.State.FAILED -> println("Failed download")
             WorkInfo.State.RUNNING -> println("Running download")
             else -> {}
         }
@@ -132,6 +135,7 @@ private fun DrawScreen(
     toPersistViewModel: ToPersistViewModel,
     navController: NavHostController
 ) {
+
     LazyColumn(modifier = Modifier.padding(vertical = 1.dp)) {
         items(items = hitsView) { hit ->
             if (hit.author!!.isNotEmpty() &&
@@ -157,8 +161,10 @@ private fun HitCard(
     navController: NavHostController
 ) {
     val encodedUrl = URLEncoder
-        .encode(hitView.storyUrl,
-            StandardCharsets.UTF_8.toString())
+        .encode(
+            hitView.storyUrl,
+            StandardCharsets.UTF_8.toString()
+        )
     RevealSwipe(
         onBackgroundEndClick = { toPersistViewModel.updateState(hitView.objectId) },
         onContentClick = {
@@ -169,7 +175,7 @@ private fun HitCard(
                     popUpTo(AppScreens.Hits.name) { inclusive = true }
                 }
         },
-        modifier = Modifier.padding(vertical = 5.dp),
+        modifier = Modifier.padding(vertical = 2.dp),
         directions = setOf(RevealDirection.EndToStart),
         hiddenContentEnd = {
             Trash()
@@ -198,7 +204,3 @@ private fun Trash() {
     )
 }
 
-@Composable
-private fun MessageFailed() {
-    println("Failed download")
-}
