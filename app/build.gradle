@@ -116,6 +116,9 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
 
+    //Swipe
+    implementation 'de.charlex.compose:revealswipe:1.0.0'
+
     //Instrumented unit test
     androidTestImplementation "junit:junit:4.13.2"
     androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1"

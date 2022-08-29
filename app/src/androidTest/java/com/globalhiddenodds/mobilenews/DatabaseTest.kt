@@ -43,7 +43,7 @@ class DatabaseTest {
         val hit = Hit("32601160", 32601049.0,
             32600677.0, "Password delisting",
             "stryan", "https://password.community",
-            1661468734.0)
+            "2022-08-25T23:03:04.000Z", 1661470910.0)
         hitDao.insert(hit)
         val hitInserted = hitDao.getHits().asLiveData().getOrAwaitValue()
         assertThat(hitInserted.size).isEqualTo(1)

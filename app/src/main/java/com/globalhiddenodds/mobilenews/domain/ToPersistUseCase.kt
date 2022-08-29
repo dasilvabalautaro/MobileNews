@@ -21,24 +21,37 @@ class ToPersistUseCase @Inject constructor(
         hits = hitDao.getHits().asLiveData()
     }
 
-    suspend fun insert() {
-        withContext(Dispatchers.IO) {
+    suspend fun insert(): Result<Boolean> {
+        val listHit = DownloadHitsWorker.listHitCloud
+
+        return withContext(Dispatchers.IO) {
             try {
-                DownloadHitsWorker.listHitCloud.forEach {
-                    val hit = hitDao.getHitById(it.objectId)
-                    if (hit == null) hitDao.insert(it.toHit())
-                    else if (hit[0].state == 1) hitDao.update(it.toHit())
+                if (listHit.isNotEmpty()){
+                    listHit.forEach {
+                        val hit = hitDao.getHitById(it.objectId)
+                        if (hit.isEmpty()) hitDao.insert(it.toHit())
+                        else if (hit[0].state == 1) hitDao.update(it.toHit())
+                    }
+                    return@withContext Result.success(true)
                 }
-                DownloadHitsWorker.listHitCloud.clear()
+                else {
+                    return@withContext Result.failure(Throwable("List empty"))
+                }
+
             } catch (throwable: Throwable) {
                 throw throwable
             }
         }
     }
 
-    suspend fun updateState(id: String) {
-        withContext(Dispatchers.IO) {
-            hitDao.updateState(id)
+    suspend fun updateState(id: String): Result<Boolean> {
+        return withContext(Dispatchers.IO) {
+            try {
+                hitDao.updateState(id)
+                return@withContext Result.success(true)
+            } catch (throwable: Throwable) {
+                throw throwable
+            }
         }
     }
 }

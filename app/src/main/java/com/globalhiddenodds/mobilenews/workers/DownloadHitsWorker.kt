@@ -21,7 +21,7 @@ class DownloadHitsWorker @Inject constructor(
         return withContext(Dispatchers.IO) {
             return@withContext try {
                 val response = NewsCloud.retrofitService.getNews()
-                val jsonMap: MutableMap<String?, Any> = response as MutableMap<String?, Any>
+                val jsonMap: MutableMap<String?, Any?> = response as MutableMap<String?, Any?>
                 val hits = WorkerUtils.getHits(jsonMap)
                 listHitCloud = WorkerUtils.setHits(hits)
                 Result.success()

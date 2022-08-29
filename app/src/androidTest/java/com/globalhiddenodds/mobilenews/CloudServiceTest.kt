@@ -46,7 +46,7 @@ class CloudServiceTest {
         )
         val response = cloudService.getNews()
         @Suppress("UNCHECKED_CAST")
-        val jsonMap: MutableMap<String?, Any> = response as MutableMap<String?, Any>
+        val jsonMap: MutableMap<String?, Any?> = response as MutableMap<String?, Any?>
         val hits = WorkerUtils.getHits(jsonMap)
         val listHitCloud = WorkerUtils.setHits(hits)
         assert(listHitCloud.isNotEmpty())

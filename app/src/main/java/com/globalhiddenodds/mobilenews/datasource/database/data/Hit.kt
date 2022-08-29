@@ -20,8 +20,10 @@ data class Hit(
     val author: String?,
     @ColumnInfo(name = ConstantsHit.KEY_STORY_URL, defaultValue = "")
     val storyUrl: String?,
-    @ColumnInfo(name = ConstantsHit.KEY_CREATED, defaultValue = "0")
-    val created: Double?,
+    @ColumnInfo(name = ConstantsHit.KEY_CREATED, defaultValue = "")
+    val created: String?,
+    @ColumnInfo(name = ConstantsHit.KEY_CREATED_I, defaultValue = "0")
+    val createdI: Double?,
     @ColumnInfo(name = ConstantsHit.KEY_STATE, defaultValue = "1")
     val state: Int = 1)
 
