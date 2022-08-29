@@ -9,7 +9,8 @@ data class HitCloud(
     val storyTitle: String?,
     val author: String?,
     val storyUrl: String?,
-    val created: Double?
+    val created: String?,
+    val createdI: Double?
 )
 
 fun HitCloud.toHit(): Hit = Hit(
@@ -19,4 +20,5 @@ fun HitCloud.toHit(): Hit = Hit(
     storyTitle,
     author,
     storyUrl,
-    created)
+    created,
+    createdI)

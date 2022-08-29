@@ -1,20 +1,28 @@
 package com.globalhiddenodds.mobilenews.viewmodel
 
+import android.annotation.SuppressLint
+import android.content.Context
 import androidx.lifecycle.*
+import com.globalhiddenodds.mobilenews.R
 import com.globalhiddenodds.mobilenews.datasource.database.data.Hit
 import com.globalhiddenodds.mobilenews.datasource.database.data.toHitView
 import com.globalhiddenodds.mobilenews.domain.ToPersistUseCase
 import com.globalhiddenodds.mobilenews.ui.data.HitView
+import com.globalhiddenodds.mobilenews.ui.data.elapse
+import com.globalhiddenodds.mobilenews.workers.DownloadHitsWorker
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 //Pattern Observer
+@SuppressLint("StaticFieldLeak")
 @HiltViewModel
 class ToPersistViewModel @Inject constructor(
-    private val toPersistUseCase: ToPersistUseCase
+    private val toPersistUseCase: ToPersistUseCase,
+    @ApplicationContext val context: Context
 ) :
     ViewModel() {
     private val taskResultMutableLive = MutableLiveData<String>()
@@ -33,6 +41,7 @@ class ToPersistViewModel @Inject constructor(
         ) {
             val listView = mutableListOf<HitView>()
             list.map { listView.add(it.toHitView()) }
+            listView.map { it.elapse() }
             return@withContext listView
         }
         return listHitView
@@ -45,7 +54,13 @@ class ToPersistViewModel @Inject constructor(
     fun insert() {
         viewModelScope.launch {
             try {
-                toPersistUseCase.insert()
+                val result = toPersistUseCase.insert()
+                if (result.isSuccess) {
+                    DownloadHitsWorker.listHitCloud.clear()
+                    taskResultMutableLive.value = context
+                        .getString(R.string.msg_success_insert)
+                }
+
             } catch (throwable: Throwable) {
                 taskResultMutableLive.value = throwable.message
             }
@@ -54,8 +69,15 @@ class ToPersistViewModel @Inject constructor(
 
     fun updateState(id: String) {
         viewModelScope.launch {
-            toPersistUseCase.updateState(id)
-            toPersistUseCase.getHits()
+            try {
+                val result = toPersistUseCase.updateState(id)
+                if (result.isSuccess) {
+                    taskResultMutableLive.value = context
+                        .getString(R.string.msg_update)
+                }
+            } catch (throwable: Throwable) {
+                taskResultMutableLive.value = throwable.message
+            }
         }
     }
 }

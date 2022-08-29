@@ -27,5 +27,6 @@ class DownloadHitsUseCase @Inject constructor(
             .addTag(ConstantsHit.TAG_DOWN)
             .build()
         workManager.enqueue(downWork)
+
     }
 }
